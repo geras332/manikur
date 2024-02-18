@@ -1,0 +1,139 @@
+@media screen and (max-width: 1330px) {
+
+    .container {
+        margin: 0 40px;
+    }
+
+    .header-text {
+        font-size: 26px;
+    }
+
+    .logo {
+        font-size: 32px;
+    }
+
+    .header-images {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .menu {
+        position: absolute;
+        top: 84px;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        background-color: #D9D0B3;
+        padding: 20px;
+        border-radius: 0 0 10px 10px;
+        height: auto;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .about__content-img img {
+        width: 330px;
+        height: 330px;
+    }
+
+    .map img {
+        max-width: 330px;
+        max-height: 330px;
+    }
+
+    .category {
+        padding: 10px 20px;
+        text-align: center;
+        border-radius: 10px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .works__images {
+        grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
+    }
+}
+
+@media screen and (max-width: 756px) {
+    .advantages {
+        display: none;
+    }
+
+    .exp__images {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .services__category {
+        gap: 10px;
+    }
+
+    .category {
+        padding: 20px 5px;
+    }
+
+    .category.active {
+        background-color: #F5F4EE;
+        padding: 20px 5px;
+    }
+
+    .social a {
+        font-size: 16px;
+    }
+
+    .contacts-title {
+        font-size: 22px;
+    }
+
+    .map img {
+        max-width: 200px;
+        min-height: 200px;
+    }
+
+    .about__content-img img {
+        min-width: 150px;
+        min-height: 150px;
+    }
+
+    .header-text .logo {
+        font-size: 32px;
+    }
+
+    .calendar-container {
+        width: 300px;
+    }
+
+    .calendar__wrapper {
+        flex-direction: column;
+    }
+
+    .works__images {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media screen and (max-width: 470px) {
+    .map {
+        display: none;
+    }
+
+    .about__content-img {
+        display: none;
+    }
+
+    .footer__wrapper {
+        justify-content: center;
+    }
+
+    .nav__logo {
+        display: none;
+    }
+}
