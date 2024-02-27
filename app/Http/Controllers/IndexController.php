@@ -14,7 +14,7 @@ class IndexController extends Controller
     public function __invoke(Request $request)
     {
         $categories = Category::all();
-        $category_id = $request->get('id', $categories->first()->id);
+        $category_id = $request->get('id', $categories->first()->id) ?? $categories->first()->id;
 
         $services = Service::where('category_id', $category_id)->get();
 

@@ -2,7 +2,7 @@ const burger = document.querySelector('#burger');
 const overlay = document.querySelector('.overlay');
 const menu = document.querySelector('#menu');
 const nav = document.querySelector('#nav');
-const headerBtn = document.querySelector('#header-btn');
+const headerBtn = document.querySelectorAll('#header-btn');
 const popup = document.querySelector('.popup');
 const popupSubmit = document.querySelector('#popupSubmit');
 const popupReg = document.querySelector('#popupReg');
@@ -14,19 +14,30 @@ calendarSubmit.addEventListener('click', function () {
     let service = document.querySelector('select[name="service"]');
     let time = document.querySelector('select[name="time"]');
 
+    if (!auth) {
+        name = document.querySelector('#name').value;
+        phone_number = document.querySelector('#phone_number').value;
+    }
+
     if (day !== null) {
         let timestamp = day.getAttribute('data-date');
 
         fetch(`/request?date=${timestamp}&service_id=${service.value}&time=${time.value}&name=${name}&phone_number=${phone_number}`, {
             method: "GET",
-        }).then(r => setNotification());
+        }).then(data => setNotification(data));
     }
 });
 
-const setNotification = function () {
-    const notification = document.querySelector('.success');
+const setNotification = function (data) {
+    const notificationSuccess = document.querySelector('.success');
+    const notificationError = document.querySelector('.error');
 
-    notification.style.display = 'block';
+    if (data === 'ok') {
+        notificationSuccess.style.display = 'block';
+    }
+    else {
+        notificationError.style.display = 'block';
+    }
 }
 
 const removeNotification = function () {
@@ -35,9 +46,11 @@ const removeNotification = function () {
     notification.style.display = 'none';
 }
 
-headerBtn.addEventListener('click', function () {
-    overlay.classList.add('active');
-    popup.style.display = 'block';
+headerBtn.forEach(btn => {
+    btn.addEventListener('click', function () {
+        overlay.classList.add('active');
+        popup.style.display = 'block';
+    });
 });
 
 popupSubmit.addEventListener('click', function () {
@@ -150,6 +163,7 @@ function getMonthName(month) {
 		'Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь',
 		'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'
 	];
+
 	return months[month];
 }
 

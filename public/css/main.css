@@ -282,7 +282,7 @@ body {
 }
 
 .notes {
-    margin-top: 30px;
+    margin-top: 130px;
 }
 
 .notes__title {
@@ -292,7 +292,7 @@ body {
 }
 
 .notes__list {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .notes__list p {
@@ -489,6 +489,17 @@ body {
     text-align: center;
     border-radius: 5px;
     color: #75b798;
+    font-size: 14px;
+}
+
+.error {
+    display: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: #2c0b0e;
+    text-align: center;
+    border-radius: 5px;
+    color: #ea868f;
     font-size: 14px;
 }
 

@@ -47,7 +47,10 @@ class LoginController extends Controller
     {
         return $request->validate([
             'phone_number' => 'required',
-            'password' => 'required|min:8',
+            'password' => 'required',
+        ], [
+            'phone_number.required' => 'Поле "Номер телефона" обязательно для заполнения.',
+            'password.required' => 'Поле "Пароль" обязательно для заполнения.',
         ]);
     }
 }

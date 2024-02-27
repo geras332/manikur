@@ -52,6 +52,11 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'phone_number' => ['required'],
             'password' => ['required', 'string', 'min:8'],
+        ], [
+            'name.required' => 'Поле "Имя" обязательно для заполнения.',
+            'phone_number.required' => 'Поле "Номер телефона" обязательно для заполнения.',
+            'password.required' => 'Поле "Пароль" обязательно для заполнения.',
+            'password.min' => 'Поле "Пароль" должно содержать минимум :min символов.',
         ]);
     }
 

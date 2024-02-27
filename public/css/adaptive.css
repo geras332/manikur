@@ -118,13 +118,13 @@
     .works__images {
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
-}
 
-@media screen and (max-width: 470px) {
     .map {
         display: none;
     }
+}
 
+@media screen and (max-width: 470px) {
     .about__content-img {
         display: none;
     }

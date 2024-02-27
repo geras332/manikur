@@ -63,6 +63,17 @@
             border: none;
             font-size: 16px;
             background-color: #FFBDBD;
+            cursor: pointer;
+        }
+
+        .alert {
+            color: #ea868f;
+            background: #2c0b0e;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #842029;
+            width: 100%;
+            font-size: 14px;
         }
 
     </style>
@@ -75,14 +86,29 @@
         <div class="input-group">
             <label for="">Введите Ваше имя</label>
             <input type="text" name="name" placeholder="Введите Ваше имя">
+            @error('name')
+            <div class="alert" role="alert">
+                {{ $message }}
+            </div>
+            @enderror
         </div>
         <div class="input-group">
             <label for="">Введите Ваш номер телефона</label>
             <input type="text" name="phone_number" placeholder="Введите Ваш номер телефона">
+            @error('phone_number')
+            <div class="alert" role="alert">
+                {{ $message }}
+            </div>
+            @enderror
         </div>
         <div class="input-group">
             <label for="">Придумайте пароль</label>
             <input type="text" name="password" placeholder="Придумайте пароль">
+            @error('password')
+            <div class="alert" role="alert">
+                {{ $message }}
+            </div>
+            @enderror
         </div>
         <div class="input-group">
             <button type="submit">Зарегистрироваться</button>
