@@ -43,4 +43,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function hasRole(string $role): bool
+    {
+        if (!auth()->check()) {
+            return false;
+        }
+
+        return auth()->user()->role === $role;
+    }
 }

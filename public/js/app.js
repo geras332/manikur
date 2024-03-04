@@ -31,8 +31,8 @@ calendarSubmit.addEventListener('click', function () {
 const setNotification = function (data) {
     const notificationSuccess = document.querySelector('.success');
     const notificationError = document.querySelector('.error');
-
-    if (data === 'ok') {
+    console.log(data);
+    if (data.status === 200) {
         notificationSuccess.style.display = 'block';
     }
     else {
@@ -48,8 +48,15 @@ const removeNotification = function () {
 
 headerBtn.forEach(btn => {
     btn.addEventListener('click', function () {
-        overlay.classList.add('active');
-        popup.style.display = 'block';
+        if (!auth) {
+            overlay.classList.add('active');
+            popup.style.display = 'block';
+        }
+        else {
+            overlay.classList.add('active');
+            popup.style.display = 'none';
+            calendar.classList.add('active');
+        }
     });
 });
 

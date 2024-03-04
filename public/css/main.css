@@ -300,6 +300,10 @@ body {
     font-weight: 500;
 }
 
+.works {
+    margin-top: 100px;
+}
+
 .works_wrapper {
     display: flex;
     justify-content: center;
@@ -334,6 +338,14 @@ body {
     color: #796B51;
     font-size: 18px;
     border-bottom: 1px solid #796B51;
+}
+
+.advantages {
+    margin-top: 100px;
+}
+
+.exp {
+    margin-top: 100px;
 }
 
 .advantages__wrapper {

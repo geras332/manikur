@@ -75,7 +75,7 @@
     </div>
 </nav>
 
-@if(!auth()->check())
+@if(!auth()->check() || (auth()->check() && auth()->user()->hasRole('admin')))
     <header class="header">
         <div class="container">
             <div class="header__wrapper">
@@ -156,7 +156,7 @@
     @endif
 @endif
 
-@if(!auth()->check())
+@if(!auth()->check() || (auth()->check() && auth()->user()->hasRole('admin')))
     <div class="works">
         <div class="container">
             <div class="works_wrapper">
