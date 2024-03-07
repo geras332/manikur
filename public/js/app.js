@@ -29,14 +29,17 @@ calendarSubmit.addEventListener('click', function () {
 });
 
 const setNotification = function (data) {
+    console.log(data.status);
     const notificationSuccess = document.querySelector('.success');
     const notificationError = document.querySelector('.error');
     console.log(data);
     if (data.status === 200) {
         notificationSuccess.style.display = 'block';
+        notificationError.style.display = 'none';
     }
     else {
         notificationError.style.display = 'block';
+        notificationSuccess.style.display = 'none';
     }
 }
 
