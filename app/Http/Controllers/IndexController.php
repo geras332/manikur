@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use App\Models\Request as UserRequest;
 use App\Models\Service;
 use App\Models\WorkImage;
 use Illuminate\Http\Request;
@@ -19,8 +20,9 @@ class IndexController extends Controller
         $services = Service::where('category_id', $category_id)->get();
 
         $userNotes = [];
-        if (auth()->check())
-            $userNotes = \App\Models\Request::where('phone_number', auth()->user()->number)->get();
+        if (auth()->check()) {
+            $userNotes = UserRequest::where('phone_number', '123')->get();
+        }
 
         $images = WorkImage::take(9)->get();
 
