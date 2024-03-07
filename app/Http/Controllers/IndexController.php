@@ -24,7 +24,7 @@ class IndexController extends Controller
             $userNotes = UserRequest::where('phone_number', '123')->get();
         }
 
-        $images = WorkImage::take(9)->get();
+        $images = WorkImage::take(6)->get();
 
         return view('index', compact('services', 'categories', 'userNotes', 'images'));
     }
