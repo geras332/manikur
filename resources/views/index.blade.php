@@ -65,6 +65,9 @@
                     <form action="{{ route('logout') }}" method="post" id="logout" style="display: none;">
                         @csrf
                     </form>
+                    <li class="menu__item">
+                        <a href="#" class="menu__item-link">{{ auth()->user()->name }}</a>
+                    </li>
                 @else
                     <li class="menu__item">
                         <a href="{{ route('login') }}" class="menu__item-link">Войти</a>

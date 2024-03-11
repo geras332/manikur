@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Service;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 
@@ -30,7 +31,10 @@ class RequestController extends Controller
                 return $request->service->title;
             })
             ->editColumn('date', function ($request) {
-                return date('Y-m-d', strtotime($request->created_at));
+                $date = Carbon::createFromTimestamp($request->date);
+                $newDate = $date->addDay();
+
+                return $newDate->format('Y-m-d');
             })
             ->editColumn('created_at', function ($request) {
                 return date('Y-m-d H:i:s', strtotime($request->created_at));
