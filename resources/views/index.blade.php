@@ -181,29 +181,29 @@
     <div class="advantages">
         <div class="container">
             <div class="advantages__wrapper">
-                <h2 class="advantages-title" id="advantage">
-                    Почему Вам стоит записаться ко мне?
-                </h2>
-                <div class="advantages__images">
-                    <div class="advantage-img">
-                        <img src="{{ asset('images/advantage_3.png') }}" alt="">
-                        <h2 class="advantage-text">Стойкость</h2>
+                <div class="advantages__wrapper-content">
+                    <div class="advantage__title">
+                        <h2 class="advantages-title" id="advantage">
+                            Почему Вам стоит записаться ко мне?
+                        </h2>
                     </div>
-                    <div class="advantage-img">
-                        <img src="{{ asset('images/advantage_4.png') }}" alt="">
-                        <h2 class="advantage-text">Хорошие отзывы</h2>
-                    </div>
-                    <div class="advantage-img">
-                        <img src="{{ asset('images/advantage_3.png') }}" alt="">
-                        <h2 class="advantage-text">Дипломированный мастер</h2>
-                    </div>
-                    <div class="advantage-img">
-                        <img src="{{ asset('images/advantage_2.png') }}" alt="">
-                        <h2 class="advantage-text">Стерильные материалы</h2>
-                    </div>
-                    <div class="advantage-img">
-                        <img src="{{ asset('images/advantage_5.png') }}" alt="">
-                        <h2 class="advantage-text">Уютная атмосфера</h2>
+                    <div class="advantages__images">
+                        <div class="advantage-img">
+                            <img src="{{ asset('images/advantage1.jpg') }}" alt="">
+                            <h2 class="advantage-text">Стойкость</h2>
+                        </div>
+                        <div class="advantage-img">
+                            <img src="{{ asset('images/advantage2.jpg') }}" alt="">
+                            <h2 class="advantage-text">Хорошие отзывы</h2>
+                        </div>
+                        <div class="advantage-img">
+                            <img src="{{ asset('images/advantage3.jpg') }}" alt="">
+                            <h2 class="advantage-text">Дипломированный мастер</h2>
+                        </div>
+                        <div class="advantage-img">
+                            <img src="{{ asset('images/advantage4.jpg') }}" alt="">
+                            <h2 class="advantage-text">Стерильные материалы</h2>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -213,21 +213,23 @@
     <div class="exp">
         <div class="container">
             <div class="exp__wrapper">
-                <h2 class="exp-title" id="exp">
-                    С чем работаю?
-                </h2>
-                <div class="exp__images">
-                    <div class="exp-img">
-                        <img src="{{ asset('images/exp_1.png') }}" alt="">
-                        <p class="exp-desc">Лак для стемпинга “Picnail”</p>
-                    </div>
-                    <div class="exp-img">
-                        <img src="{{ asset('images/exp_2.png') }}" alt="">
-                        <p class="exp-desc">Стойкие гели для укрепления и комуфлирования</p>
-                    </div>
-                    <div class="exp-img">
-                        <img src="{{ asset('images/exp_3.png') }}" alt="">
-                        <p class="exp-desc">Фрезер strong 210</p>
+                <div class="exp__wrapper-content">
+                    <h2 class="exp-title" id="exp">
+                        С чем работаю?
+                    </h2>
+                    <div class="exp__images">
+                        <div class="exp-img first">
+                            <img src="{{ asset('images/exp_1.png') }}" alt="">
+                            <p class="exp-desc">Лак для стемпинга “Picnail”</p>
+                        </div>
+                        <div class="exp-img">
+                            <img src="{{ asset('images/exp_2.png') }}" alt="">
+                            <p class="exp-desc">Стойкие гели для укрепления и комуфлирования</p>
+                        </div>
+                        <div class="exp-img">
+                            <img src="{{ asset('images/exp_3.png') }}" alt="">
+                            <p class="exp-desc">Фрезер strong 210</p>
+                        </div>
                     </div>
                 </div>
             </div>

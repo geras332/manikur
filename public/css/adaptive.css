@@ -44,6 +44,16 @@
         height: 330px;
     }
 
+    .exp-img img {
+        width: 247px;
+        height: 378px;
+    }
+
+    .exp-img.first img {
+        width: 347px;
+        height: 378px;
+    }
+
     .map img {
         max-width: 330px;
         max-height: 330px;
