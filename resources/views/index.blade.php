@@ -190,19 +190,19 @@
                     <div class="advantages__images">
                         <div class="advantage-img">
                             <img src="{{ asset('images/advantage1.jpg') }}" alt="">
-                            <h2 class="advantage-text">Стойкость</h2>
-                        </div>
-                        <div class="advantage-img">
-                            <img src="{{ asset('images/advantage2.jpg') }}" alt="">
                             <h2 class="advantage-text">Хорошие отзывы</h2>
                         </div>
                         <div class="advantage-img">
+                            <img src="{{ asset('images/advantage2.jpg') }}" alt="">
+                            <h2 class="advantage-text">Стерильные материалы</h2>
+                        </div>
+                        <div class="advantage-img">
                             <img src="{{ asset('images/advantage3.jpg') }}" alt="">
-                            <h2 class="advantage-text">Дипломированный мастер</h2>
+                            <h2 class="advantage-text">Уютная атмосфера</h2>
                         </div>
                         <div class="advantage-img">
                             <img src="{{ asset('images/advantage4.jpg') }}" alt="">
-                            <h2 class="advantage-text">Стерильные материалы</h2>
+                            <h2 class="advantage-text">Стойкость</h2>
                         </div>
                     </div>
                 </div>
