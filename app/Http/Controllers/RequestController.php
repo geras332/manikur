@@ -17,6 +17,7 @@ class RequestController extends Controller
         ]);
 
         $data['date'] = strtotime($data['date']);
+        $data['date'] = strtotime('+1 day', $data['date']);
         if (\App\Models\Request::where('date', $data['date'])->where('time', $data['time'])->exists()) {
             return response('error', 422);
         }
